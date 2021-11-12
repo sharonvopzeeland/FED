@@ -33,7 +33,7 @@ eerst maar responsive
 ## Je website
 
 <details>
-<summary>uitwerken voor kick-off werkgroep</summary>
+<summary>Ik kies de website Too Good To Go want ik vind het een goed concept en wil dit supporten! Ik vind ook dat de site leuk gebruik maakt van verschillende typografie en de verdere vormgeving vind ik er ook top uitzien.</summary>
 
 ### Je opdracht:
 https://toogoodtogo.nl/nl
