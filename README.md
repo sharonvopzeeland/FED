@@ -72,7 +72,7 @@ De movement
 <img src="images/iPhone XR, XS Max, 11 – 1.png" width="954px" alt="breakdown van de hele pagina">
 
 ### dynamisch deel (bijv menu): 
-<img src="iPhone XR, XS Max, 11 – 2.png" width="846px" alt="breakdown van een dynamisch deel">
+<img src="images/iPhone XR, XS Max, 11 – 2.png" width="846px" alt="breakdown van een dynamisch deel">
 
 
 
