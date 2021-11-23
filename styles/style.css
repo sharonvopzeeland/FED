@@ -3,3 +3,68 @@
   box-sizing:border-box;  
 }
 
+/* ff snel een width */
+img {
+  width: 120px;
+}
+
+:root {
+  --background-color:#fcf8f2;
+  --h2-color:#114d4d;
+
+}
+
+body {
+  font-family: 'Poppins', 'Source Sans Pro';
+  background-color:var(--background-color);
+  margin: 0;
+}
+
+header > nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.5em;
+
+  padding: 1em;
+  display: flex;
+  align-content: space-between;
+  align-items: center;
+
+}
+
+
+header > nav > ul > li {
+  display: inline;
+  padding: .5em;
+}
+
+header > nav > ul > li > a {
+  font-size: 1.125em;
+  font-family: 'Poppins', 'Source Sans Pro';
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--h2-color);
+}
+
+section h2 {
+  color:var(--h2-color);
+  font-size:4em;
+  line-height:1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  justify-content: center;
+
+  display: grid;
+  grid-template-columns:6em;
+} 
+
+section:first-of-type h2 {
+  font-size: 6em;
+}
+
+
+
