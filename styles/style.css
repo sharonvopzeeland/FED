@@ -1,14 +1,18 @@
 /* CSS Document */
 *, *::after, *::before {
   box-sizing:border-box;  
+  margin: 0;
+  padding: 0;
 }
+
+
 
 :root {
   --background-color:#fcf8f2;
   --h2-color:#114d4d;
   --h3-color:#49ADA1;
   --p-color:#212529;
-
+  --border-top-color: #e0e0e0;
 }
 
 
@@ -27,9 +31,9 @@ body {
 
   background-color:var(--background-color);
 
-
-
+ 
 }
+
 
 
 
@@ -40,66 +44,147 @@ body {
 /* HEADER */
 /*********/
 
-
-
-header nav {
-  width: 100%;
+header {
+  padding: 1em 1em;
+  background-color: var(--background-color);
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: .5em;
+  
+  /* bij position:fixed gaat h1 etc helemaal naar boven */
+
+  width: 100%;
+  position: relative;
+  z-index:50;
 }
 
-
-header nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  list-style-type: none;
-}
-
-header nav ul li a {
-  display: inline-block;
-  color: var(--h2-color);
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 800;
-  padding: .7em 1.25em;
-}
-
-header nav img {
-  padding: .5em;
-  width: 4em;
+header img {
+  width: 3em;
   height: auto;
+
+  position: relative;
+  z-index: 150;
 }
 
 
 
 
+/**************************/
+/*   NAV > HAMBURGERMENU */
+/************************/
 
 
+nav button {
+  color:var(--p-color);
+  width: 4em;
+  height: 4em;
+  border:none;
 
-/***********/
-/* FOOTER */
-/*********/
-footer section h2 {
-  font-size: 1em;
-  text-transform: uppercase;
-  text-align: center;
+  background-color: transparent;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  z-index:200; 
+
+  cursor: pointer;
+  
 }
 
-footer section ul  {
+nav button span {
+  display: block;
+  width: 50%;
+  height:3px;
+
+  /* hoe gaan ze rond? */
+  
+  background-color: var(--h2-color);
+
+  position:absolute;
+
+  transition: .3s;
+
+}
+
+nav button span:nth-of-type(1) {
+  transform: translateY(-8px);
+}
+
+/* nav button span:nth-of-type(2) {
+
+} */
+
+nav button span:nth-of-type(3) {
+  transform: translateY(8px);
+}
+
+/* nav.toonHamburger button span {
+
+} */
+
+nav.toonHamburger button span:nth-of-type(1) {
+  transform: rotate(45deg);
+}
+
+nav.toonHamburger button span:nth-of-type(2) {
+  opacity: 0;
+}
+
+nav.toonHamburger button span:nth-of-type(3) {
+  transform: rotate(-45deg);
+}
+
+
+nav ul {
+  transform: translateY(-100%);
+  
+  position: fixed; 
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  padding:5em 0 0;
+  background-color:var(--background-color);
   list-style-type: none;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--p-color);
+  transition: .3s;
 }
 
-footer section ul li a {
-  text-decoration: none;
-  color: var(--p-color);
+nav.toonHamburger ul {
+  transform:translateY(0);
 }
+
+
+
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  
+  position: absolute;
+  left: 1em;
+
+  color: var(--h2-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 2em;
+  font-size: 1.5em;
+  
+  
+}
+
+
+nav a:hover {
+  border-bottom: var(--h3-color) solid .2em;
+  width: 50%;
+}
+
+
 
 
 
@@ -121,19 +206,9 @@ main section h2 {
   color:var(--h2-color);
   text-transform: uppercase;
   font-weight: 900;
-
 } 
 
-/* van W3Schools: https://www.w3schools.com/howto/howto_css_image_center.asp */
-main section img {
-  max-width: 100%;
-  width: 20em;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
 
-  
-}
 
 
 
@@ -148,10 +223,21 @@ main section:first-of-type h2 {
   font-size: 3.5em;
   line-height: 1;
   text-align: center;
-  margin: 0;
+  margin: 0 auto 0.75em auto;
+  width: 5em;
+
 }
 
+/* van W3Schools: https://www.w3schools.com/howto/howto_css_image_center.asp */
+main section:first-of-type img {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 2em;
 
+  
+}
 
 
 
@@ -166,10 +252,11 @@ main section:nth-of-type(2) {
 }
 
 main section:nth-of-type(2) h2 {
-  font-size: 2em;
+  font-size: 2.2em;
+  width: 10em;
   line-height: 1em;
   text-align: left;
-  margin: 0 0 .2em 0;
+  margin: 0 0 .6em 0;
 
 }
 
@@ -178,7 +265,7 @@ main section:nth-of-type(2) h3 {
   color:var(--h3-color) ;
   font-weight: 400;
   text-transform: uppercase;
-  margin: 0.2em 0 .5em 0;
+  margin: 0 0 .75em 0;
 
 }
 
@@ -194,7 +281,9 @@ main section:nth-of-type(2) p {
 }
 
 main section:nth-of-type(2) img {
-  margin: 0;
+  width: 60%;
+  margin: 3em auto 3em auto;
+  display: block;
 }
 
 
@@ -207,6 +296,44 @@ main section:nth-of-type(2) img {
 /***********/
 
 
+main section:nth-of-type(3) h2 {
+  font-size: 2em;
+  line-height: 1em;
+  text-align: center;
+  margin: 1em auto .2em auto;
+  font-weight: 800;
+  width: 12em;
+}
+
+main section:nth-of-type(3) h3 {
+  font-size: 2.5em;
+  color:var(--h3-color) ;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 1em 0 0 0;
+  text-align: center;
+
+}
+
+main section:nth-of-type(3) h3:first-of-type {
+  margin: 1.5em 0 0 0;
+}
+
+main section:nth-of-type(3) p {
+  font-size: 1.1em;
+  line-height: 1.1em;
+  text-align: center;
+  color: var(--h2-color);
+  font-weight: 500;
+  margin: 0 auto 0 auto;
+  width:15em;
+
+}
+
+main section:nth-of-type(3) img {
+  margin: 0;
+}
+
 
 
 
@@ -215,20 +342,65 @@ main section:nth-of-type(2) img {
 /*************/
 /* 4e section */
 /***********/
+
+main section:nth-of-type(4) {
+  margin-left: 2em;
+  
+}
+
 main section:nth-of-type(4) h2 {
-  font-size: 1.5em;
+  font-size: 1.9em;
   line-height: 1em;
   text-align: left;
-  margin-left: 10%;
-  margin-bottom: 0;
+  margin: 0 0 .4em 0;
+
 }
 
 main section:nth-of-type(4) h3 {
-  font-size: 1em;
+  font-size: 1.25em;
   color:var(--h3-color) ;
   font-weight: 400;
   text-transform: uppercase;
-  margin:.5em 0 0 10%;
+  margin: 0 0 .75em 0;
+
+}
+
+main section:nth-of-type(4) p {
+  font-size: 1em;
+  line-height: 1.4em;
+  text-align: left;
+  color: var(--h2-color);
+  font-weight: 350;
+  margin: 1em auto 1em auto;
+
+  
+  
+}
+
+main section:nth-of-type(4) img {
+  width: 80%;
+  margin: 3em auto 3em auto;
+  display: block;
+  border-radius: 3em;
+  box-shadow: var(--p-color) 0 0 30px;
+}
+
+main section:nth-of-type(4) a {
+  padding: 1em 2.5em;
+  background-color: var(--h2-color);
+  color: var(--background-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3em;
+  font-weight: 550;
+  font-size: 1em;
+  
+  
+  position: absolute;
+  left:50%;
+  top:35em;
+  transform:translate(-50%, -50%);
 }
 
 
@@ -240,19 +412,130 @@ main section:nth-of-type(4) h3 {
 /*************/
 /* 5e section */
 /***********/
+main section:nth-of-type(5) {
+  margin: 12em 0 12em 2em;
+  
+}
+
 main section:nth-of-type(5) h2 {
-  font-size: 1.5em;
+  font-size: 1.9em;
   line-height: 1em;
   text-align: left;
-  margin-left: 10%;
-  margin-bottom: 0;
+  margin: 0 0 .4em 0;
+
 }
 
 main section:nth-of-type(5) h3 {
-  font-size: 1em;
+  font-size: 1.25em;
   color:var(--h3-color) ;
   font-weight: 400;
   text-transform: uppercase;
-  margin:.5em 0 0 10%;
+  margin: 0 0 .75em 0;
+
 }
 
+main section:nth-of-type(5) p {
+  font-size: 1em;
+  line-height: 1.4em;
+  text-align: left;
+  color: var(--h2-color);
+  font-weight: 350;
+  margin: 1em auto 1em auto;
+
+  
+  
+}
+
+main section:nth-of-type(5) img {
+  width: 80%;
+
+  margin: 3em auto 3em auto;
+  display: block;
+  border-radius: 3em;
+  box-shadow: var(--p-color) 0 0 30px;
+}
+
+main section:nth-of-type(5) a {
+  padding: 1em 1em;
+  background-color: var(--h2-color);
+  color: var(--background-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3em;
+  font-weight: 550;
+  font-size: 1em;
+  width: 80%;
+  
+  
+  position: absolute;
+  left:50%;
+  top:45em;
+  transform:translate(-50%, -50%);
+  
+}
+
+
+
+
+
+
+
+
+
+/***********/
+/* FOOTER */
+/*********/
+footer {
+  padding-top: 5em;
+  border-top: solid 2px var(--border-top-color);
+}
+
+footer h1 {
+  /* hoe weg doen? */
+  display: none;
+}
+
+footer section h2 {
+  color: var(--p-color);
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+}
+
+footer section ul  {
+  list-style-type: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--p-color);
+  margin-bottom: 3em;
+}
+
+footer section ul li a {
+  text-decoration: none;
+  color: var(--p-color);
+  font-size: 1.2em;
+}
+
+footer img {
+  width:100%;
+}
+
+footer section:nth-of-type(4) {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+
+footer section:nth-of-type(5) img {
+  width: 15%;
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+footer section:nth-of-type(5) p {
+  font-size: .75em;
+  text-align: center;
+  margin-top: 3em;
+}
