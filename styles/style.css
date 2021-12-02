@@ -13,6 +13,8 @@
   --h3-color:#49ADA1;
   --p-color:#212529;
   --border-top-color: #e0e0e0;
+  /* van site, 50% is opacity */
+  --box-shadow:rgb(95 95 95 / 50%);
 }
 
 
@@ -25,13 +27,15 @@
 /********/
 
 body {
-  margin: 0;
-
-  font-family: 'Poppins', 'Source Sans Pro';
-
   background-color:var(--background-color);
+}
 
- 
+h2, h3, a {
+  font-family: 'Poppins', 'Source Sans Pro';
+}
+
+p {
+  font-family: "Open Sans";
 }
 
 
@@ -57,6 +61,10 @@ header {
   z-index:50;
 }
 
+header h1 {
+  display: none;
+}
+
 header img {
   width: 3em;
   height: auto;
@@ -64,6 +72,8 @@ header img {
   position: relative;
   z-index: 150;
 }
+
+
 
 
 
@@ -158,30 +168,35 @@ nav.toonHamburger ul {
 
 
 
-nav li {
-  margin: 0;
+nav ul li {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2.8em;
   padding: 0;
+  position: relative;
 }
 
-nav a {
+nav ul li a {
   
   position: absolute;
   left: 1em;
-
+  
+  padding: 0;
+  
   color: var(--h2-color);
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: bold;
-  line-height: 2em;
+  font-weight: 800;
+
   font-size: 1.5em;
   
   
 }
 
 
-nav a:hover {
-  border-bottom: var(--h3-color) solid .2em;
-  width: 50%;
+
+nav ul li a:hover, nav ul li a:active {
+  border-bottom: var(--h3-color) solid .125em;
 }
 
 
@@ -235,8 +250,6 @@ main section:first-of-type img {
   margin-right: auto;
   display: block;
   margin-bottom: 2em;
-
-  
 }
 
 
@@ -274,10 +287,9 @@ main section:nth-of-type(2) p {
   line-height: 1.4em;
   text-align: left;
   color: var(--h2-color);
-  font-weight: 350;
+  font-weight: 400;
   margin: 0 2em 2em 0;
   
-
 }
 
 main section:nth-of-type(2) img {
@@ -328,6 +340,7 @@ main section:nth-of-type(3) p {
   margin: 0 auto 0 auto;
   width:15em;
 
+  font-family: 'Poppins', 'Source Sans Pro';
 }
 
 main section:nth-of-type(3) img {
@@ -370,19 +383,34 @@ main section:nth-of-type(4) p {
   line-height: 1.4em;
   text-align: left;
   color: var(--h2-color);
-  font-weight: 350;
-  margin: 1em auto 1em auto;
+  font-weight: 400;
+  max-width: 28em;
 
   
   
 }
 
+/* container van img */
+main section:nth-of-type(4) section {
+  justify-content: center;
+  margin: 3em 0 3em 0;
+  width:30em;
+  height: 15em;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1.75em;
+  box-shadow: var(--box-shadow) 0 12px 40px 0;
+}
+
 main section:nth-of-type(4) img {
-  width: 80%;
-  margin: 3em auto 3em auto;
+  width: 120%;
+  height: auto;
   display: block;
-  border-radius: 3em;
-  box-shadow: var(--p-color) 0 0 30px;
+  position: absolute;
+  
+  left: -1.5em;
+  bottom: -2em;
 }
 
 main section:nth-of-type(4) a {
@@ -395,8 +423,11 @@ main section:nth-of-type(4) a {
   border-radius: 3em;
   font-weight: 550;
   font-size: 1em;
+  max-width: 100%;
+  min-width: 200px;
+  box-shadow:  var(--box-shadow) 0 12px 40px 0;
   
-  
+  /* niet in het midden??????? */
   position: absolute;
   left:50%;
   top:35em;
@@ -436,23 +467,34 @@ main section:nth-of-type(5) h3 {
 
 main section:nth-of-type(5) p {
   font-size: 1em;
-  line-height: 1.4em;
+  max-width: 30em;
+  line-height: 1.6em;
   text-align: left;
   color: var(--h2-color);
-  font-weight: 350;
-  margin: 1em auto 1em auto;
+  font-weight: 400;
+ 
 
   
   
 }
 
-main section:nth-of-type(5) img {
-  width: 80%;
+/* container van img */
+main section:nth-of-type(5) section {
+  justify-content: center;
+  margin: 3em 0 3em 0;
+  width: 30em;
+  height: 15em;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  border-radius: 1.75em;
+  box-shadow: var(--box-shadow) 0 12px 40px 0;
+}
 
-  margin: 3em auto 3em auto;
+main section:nth-of-type(5) img {
+  width: 100%;
+  height: auto;
   display: block;
-  border-radius: 3em;
-  box-shadow: var(--p-color) 0 0 30px;
 }
 
 main section:nth-of-type(5) a {
@@ -463,14 +505,16 @@ main section:nth-of-type(5) a {
   text-decoration: none;
   text-align: center;
   border-radius: 3em;
-  font-weight: 550;
+  font-weight: 600;
   font-size: 1em;
-  width: 80%;
+  max-width: 100%;
+  min-width: 300px;
+  box-shadow:  var(--box-shadow) 0 12px 40px 0;
   
-  
+  /* niet in het midden????????? */
   position: absolute;
   left:50%;
-  top:45em;
+  top:35em;
   transform:translate(-50%, -50%);
   
 }
