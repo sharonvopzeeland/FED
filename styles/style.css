@@ -611,6 +611,33 @@ main.tweedePagina section:nth-of-type(8) a:first-of-type {
 
 
 
+/***********/
+/* STATES */
+/*********/
+main section a:hover {
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+main section a:focus {
+  background-color: var(--h3-color);
+  color: var(--h2-color);
+  outline: none;
+  box-shadow: 0 0 0 3px var(--h2-color);
+}
+
+footer section a:focus {
+  border-radius: .4em;
+  padding: .1em .8em;
+  outline:none;
+  box-shadow: 0 0 0 3px var(--h2-color);
+}
+
+
+
+
+
+
 
 /***********/
 /* FOOTER */
