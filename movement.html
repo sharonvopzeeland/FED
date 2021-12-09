@@ -13,11 +13,16 @@
 	<!-- Google fonts: Source Sans Pro, Poppins en Open Sans  -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Caveat+Brush&display=swap" rel="stylesheet">	
 </head>
 <body>
     <header>
         <a href="index.html"><img src="images/econ-textless (1).svg" alt="Het logo"></a>
+        
+        <section>
+            <input type="checkbox" id="dark-mode" name="dark-mode" value="dark-mode" class="visually-hidden">
+            <label for="dark-mode">Dark mode</label>
+        </section>
 
 		<nav>
 			<button aria-hidden="true">
@@ -108,7 +113,24 @@
             <a href="#">Ontdek onze kennisdatabank</a>
             <img src="./images/postzegelravioli.svg" alt="">
             <p>Als je vragen hebt over onze missie en impact, dan horen we graag van je.</p>
-            <a href="#">Neem contact met ons op</a>
+            <button>Neem contact met ons op</button>
+
+            <form action="" method="post">
+                <label for="Naam">Naam</label>
+                <input type="text" name="naam" id="Naam" required>
+
+                <label for="Email">E-mailadres</label>
+                <input type="email" name="email" id="Email" required>
+
+                <label for="Onderwerpen">Onderwerpen</label>
+                <input type="text" name="onderwerpen" id="Onderwerpen" required>
+
+                <label for="Bericht">Bericht</label>
+                <textarea name="bericht" id="Bericht" cols="30" rows="10"></textarea>
+
+                <button name="submit" type="submit" id="Submit" data-submit="...Versturen" >Versturen</button>
+           
+            </form>
         </section>
 
     </main>

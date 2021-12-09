@@ -13,7 +13,7 @@
   --h3-color:#49ADA1;
   --p-color:#212529;
   --border-top-color: #e0e0e0;
-  /* van site, 50% is opacity */
+  /* van Too Good To Go site, 50% is opacity */
   --box-shadow:rgb(95 95 95 / 50%);
   --p-persoon-color: #6C757D;
   --white-color: #FFFFFF;
@@ -21,7 +21,54 @@
 
 
 
+@media (prefers-color-scheme:dark) {
+  :root {
+    --background-color:#114d4d;
+    --h2-color:#fcf8f2;
+    --p-color:#e0e0e0;
 
+  }
+}
+
+:root.darkMode {
+  --background-color:#114d4d;
+  --h2-color:#fcf8f2;
+  --p-color:#e0e0e0;
+}
+
+header section {
+  margin: auto 0 auto 0;
+}
+
+
+header label {
+  font-family: "Poppins";
+  border: solid 2px var(--h2-color);
+  border-radius: 1em;
+  padding: .2em 1em;
+}
+
+header input:focus, header input:hover + label {
+  border-radius: 1em;
+  padding: .2em 1em;
+  background-color: var(--h2-color);
+  color: white;
+  
+}
+
+header input:checked + label {
+  color: var(--p-color);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 
 
 /**********/
@@ -56,7 +103,6 @@ header {
   display: flex;
   justify-content: space-between;
   
-  /* bij position:fixed gaat h1 etc helemaal naar boven */
 
   width: 100%;
   position: relative;
@@ -106,6 +152,9 @@ nav button {
   
 }
 
+
+
+
 nav button span {
   display: block;
   width: 50%;
@@ -119,6 +168,8 @@ nav button span {
   transition: .3s;
 
 }
+
+
 
 nav button span:nth-of-type(1) {
   transform: translateY(-8px);
@@ -589,41 +640,146 @@ main.tweedePagina section:nth-of-type(7) img {
 /*************************/
 /* 7e section 2E PAGINA */
 /***********************/
+main.tweedePagina section:nth-of-type(8) {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 main.tweedePagina section:nth-of-type(8) h2 {
   text-align: center;
   font-size: 1.9em;
+  margin: 0 auto 0 auto;
 }
 
 main.tweedePagina section:nth-of-type(8) h3 {
   text-align: center;
   font-size: 1.3em;
   font-weight: normal;
-  
+  margin: 0 auto 0 auto;
 }
 
-main.tweedePagina section:nth-of-type(8) a:first-of-type {
-  position:absolute;
-  left: auto;
-  right: auto;
-  
+main.tweedePagina section:nth-of-type(8) p {
+  font-family: "Caveat Brush";
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+
+main.tweedePagina section:nth-of-type(8) img {
+  margin: 2em auto 2em auto;
+}
+
+main section:nth-of-type(8) button {
+  cursor: pointer;
+  width: 20em;
+  color: var(--background-color);
+  background-color: var(--h2-color);
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1em;
+  border-radius: 2em;
+  border: none;
+  padding: 1em 1em;
+  margin: 2em auto 2em auto;
+  box-shadow: var(--box-shadow) 0 12px 40px 0;
 }
 
 
 
 
 /***********/
-/* STATES */
+/*  FORM  */
 /*********/
-main section a:hover {
-  transform: scale(1.1);
-  transition: .3s;
+main section:nth-of-type(8) form {
+  opacity: 0;
+  
+  z-index: 200;
+
+  font-family: "Poppins";
+  padding: 2.5em 2.5em;
+  background-color: var(--background-color);
+  box-shadow: var(--box-shadow) 0 12px 40px 0;;
+  border-radius: 1.5em;
+  margin-bottom: 4em;
 }
 
-main section a:focus {
+main section:nth-of-type(8) form.toonContact {
+  opacity: 1;
+
+}
+
+main section:nth-of-type(8) form input {
+  background-color: var(--background-color);
+  border: none;
+  border-bottom: 3px solid var(--border-top-color);
+  font-family: "Poppins";
+  font-size: 1em;
+  width: 100%;
+  padding: .5em .5em;
+  margin-bottom: 2em;
+}
+
+main section:nth-of-type(8) form label {
+  color: var(--h2-color);
+  font-weight: 500;
+}
+
+main section:nth-of-type(8) form button[type=submit] {
+  cursor: pointer;
+  width: 10em;
+  color: var(--background-color);
+  background-color: var(--h2-color);
+  font-family: "Poppins";
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1em;
+  border-radius: 2em;
+  border: none;
+  padding: 1em 1em;
+}
+
+main section:nth-of-type(8) form textarea {
+  background-color: var(--background-color);
+  width: 100%;
+  border-radius: .5em;
+  border: solid 3px var(--border-top-color);
+  font-family: "Poppins";
+  font-size: 1em;
+  padding: .1em .1em;
+  color: var(--h2-color);
+}
+
+main section:nth-of-type(8) form input:focus {
+  outline: none;
+  border-bottom: solid 3px var(--h2-color);
+}
+
+main section:nth-of-type(8) form textarea:focus {
+  outline: none;
+  border: solid 3px var(--h2-color);
+}
+
+
+
+/***********/
+/* STATES */
+/*********/
+
+main section a:active,
+main section button:active {
+  background-color: var(--background-color);
+  color: var(--h2-color);
+}
+
+main section a:focus, 
+main section button:focus,
+main section a:hover,
+main section button:hover {
+  border: var(--h2-color) solid 3px;
   background-color: var(--h3-color);
   color: var(--h2-color);
   outline: none;
-  box-shadow: 0 0 0 3px var(--h2-color);
+  
 }
 
 footer section a:focus {
@@ -631,6 +787,16 @@ footer section a:focus {
   padding: .1em .8em;
   outline:none;
   box-shadow: 0 0 0 3px var(--h2-color);
+}
+
+nav button:hover span {
+  
+  background-color: var(--background-color);
+}
+
+nav button:hover {
+  background-color: var(--h2-color);
+  border-radius: 2em;
 }
 
 
