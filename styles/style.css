@@ -10,6 +10,7 @@
 
 :root {
   --background-color:#fcf8f2;
+  --background-color-2:#fcf8f2;
   --background-form:#fcf8f2;
   --h2-color:#114d4d;
   --h3-color:#49ADA1;
@@ -20,11 +21,6 @@
   --p-persoon-color: #6C757D;
   --white-color: #FFFFFF;
 }
-
-
-
-
-
 
 
 
@@ -58,6 +54,7 @@ header label {
   border: solid 2px var(--h2-color);
   border-radius: 1em;
   padding: .2em 1em;
+  cursor: pointer;
 }
 
 header input:focus, header input:hover + label {
@@ -119,6 +116,7 @@ p {
 
 
 
+
 /***********/
 /* HEADER */
 /*********/
@@ -152,6 +150,7 @@ header img {
 
 
 
+
 /**************************/
 /*   NAV > HAMBURGERMENU */
 /************************/
@@ -165,7 +164,6 @@ nav button {
 
   background-color: transparent;
 
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,8 +171,7 @@ nav button {
   position: relative;
   z-index:200; 
 
-  cursor: pointer;
-  
+  cursor: pointer; 
 }
 
 nav button span {
@@ -188,7 +185,6 @@ nav button span {
   position:absolute;
 
   transition: .3s;
-
 }
 
 nav button span:nth-of-type(1) {
@@ -314,9 +310,10 @@ main section a {
   font-size: 1em;
   
   border-radius: 3em;
-  box-shadow:  var(--box-shadow) 0 12px 40px 0;
-  
+  box-shadow:  var(--box-shadow) 0 12px 40px 0; 
 }
+
+
 
 
 
@@ -345,6 +342,8 @@ main section:first-of-type img {
   display: block;
   margin-bottom: 2em;
 }
+
+
 
 
 
@@ -385,6 +384,7 @@ main section:nth-of-type(2) img {
   margin: 3em auto 3em auto;
   display: block;
 }
+
 
 
 
@@ -435,6 +435,7 @@ main section:nth-of-type(3) p {
 main section:nth-of-type(3) img {
   margin: 0;
 }
+
 
 
 
@@ -531,13 +532,40 @@ main.tweedePagina section:first-of-type h2 {
 }
 
 main.tweedePagina section:first-of-type img {
-  margin: 3em auto 3em auto;
-  width: 60%;
+  width: 100%;
+  background-color: var(--background-color-2);
+  border-radius: 50%;
+  padding: 2em;
+}
+
+main.tweedePagina section:first-of-type div {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin: 2em auto 2em auto;
+  display: inline-block;
+}
+
+main.tweedePagina section:first-of-type div img:last-of-type {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+/* NIET TEVEEL OVER VRAGEN AUB! */
+/* image op hover veranderen, bron: https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php */
+main.tweedePagina section:first-of-type div:hover img:last-of-type {
+  display: inline;
+}
+
+main.tweedePagina section:first-of-type div:hover img:first-of-type {
+  opacity: 0;
 }
 
 main.tweedePagina section:first-of-type p:first-of-type {
   margin: 0;
-
   font-weight: 500;
 }
 
@@ -547,6 +575,7 @@ main.tweedePagina section:first-of-type p:nth-of-type(2) {
   text-transform: uppercase;
   font-size: .9em;
 }
+
 
 
 
@@ -579,6 +608,7 @@ main.tweedePagina section:nth-of-type(2) p:nth-of-type(4) {
 
 
 
+
 /*************************************/
 /* 3e, 4e, 5e, 6e section 2E PAGINA */
 /***********************************/
@@ -586,7 +616,8 @@ main.tweedePagina section:nth-of-type(3),
 main.tweedePagina section:nth-of-type(4), 
 main.tweedePagina section:nth-of-type(5),
 main.tweedePagina section:nth-of-type(6) {
-  padding-bottom: 1em;
+  padding: 2em 0;
+  margin: 0 2em 0 2em;
 }
 
 main.tweedePagina section:nth-of-type(3) div, 
@@ -654,6 +685,10 @@ main.tweedePagina section:nth-of-type(6) a {
 
 
 
+
+
+
+
 /*************************/
 /* 7e section 2E PAGINA */
 /***********************/
@@ -670,13 +705,37 @@ main.tweedePagina section:nth-of-type(7) h2 {
 }
 
 main.tweedePagina section:nth-of-type(7) img {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2em;
-  display: block;
+  width: 60%;
+  background-color: var(--background-color-2);
+  border-radius: 50%;
+  padding: 2em;
 }
 
+/* NIET TEVEEL OVER VRAGEN AUB! */
+/* image op hover veranderen, bron: https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php */
+main.tweedePagina section:nth-of-type(7) div {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 2em;
+}
+
+main.tweedePagina section:nth-of-type(7) div img:last-of-type {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+main.tweedePagina section:nth-of-type(7) div:hover img:last-of-type {
+  display: inline;
+}
+
+main.tweedePagina section:nth-of-type(7) div:hover img:first-of-type {
+  opacity: 0;
+  
+}
 
 
 
@@ -684,23 +743,25 @@ main.tweedePagina section:nth-of-type(7) img {
 
 
 /*************************/
-/* 7e section 2E PAGINA */
+/* 8e section 2E PAGINA */
 /***********************/
 main.tweedePagina section:nth-of-type(8) {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+
+  margin-top: 3em;
+  text-align: left;
 }
 
 main.tweedePagina section:nth-of-type(8) h2 {
-  margin: 0 auto 0 auto;
-
-  text-align: center;
-  font-size :min(calc(.8em + 4vw), 3em);}
+  font-size :min(calc(.8em + 4vw), 3em);
+}
 
 main.tweedePagina section:nth-of-type(8) h3 {
   margin: 0 auto 0 auto;
 
-  text-align: center;
+
   font-size: 1.3em;
   font-weight: normal;
 }
@@ -713,13 +774,19 @@ main.tweedePagina section:nth-of-type(8) p {
 }
 
 main.tweedePagina section:nth-of-type(8) img {
-  margin: 2em auto 2em auto;
+  margin: 3em auto 3em auto;
+}
+
+main.tweedePagina section:nth-of-type(8) a {
+  margin-left: 0;
 }
 
 main section:nth-of-type(8) button {
-  width: 20em;
+  width: 18em;
+  max-width: 100%;
   padding: 1em 1em;
-  margin: 2em auto 2em auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
 
   color: var(--background-color);
   background-color: var(--h2-color);
@@ -729,15 +796,10 @@ main section:nth-of-type(8) button {
   font-size: 1em;
 
   cursor: pointer;
-  border-radius: 2em;
+  border-radius: 3em;
   border: none;
   box-shadow: var(--box-shadow) 0 12px 40px 0;
 }
-
-
-
-
-
 
 
 /***********/
@@ -835,25 +897,20 @@ main section a:focus,
 main section button:focus,
 main section a:hover,
 main section button:hover {
+  background-color: var(--h3-color);
   outline: none;
 
-  background-color: var(--h3-color);
-  color: var(--h2-color);
-
-  border: var(--h2-color) solid 3px;
   
 }
 
 footer section a:focus {
   padding: .1em .8em;
   outline:none;
-
-  border-radius: .4em;
+  border-radius: .5em;
   box-shadow: 0 0 0 3px var(--h2-color);
 }
 
 nav button:hover span {
-  
   background-color: var(--background-color);
 }
 

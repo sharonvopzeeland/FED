@@ -1,11 +1,10 @@
 // JavaScript Document
 var hamburgerMenu = document.querySelector("nav button");
-
 var colorChangeInput = document.querySelector("header input");
-
 var contactFormKnop = document.querySelector("main section:nth-of-type(8) button");
 
 
+// hamburger menu, klikken = tonen
 hamburgerMenu.addEventListener("click", toggleHamburger);
 
 function toggleHamburger() {
@@ -14,7 +13,7 @@ function toggleHamburger() {
 }
 
 
-
+// Dark Mode
 colorChangeInput.addEventListener('change', switchenVanModus);
 
 function switchenVanModus() {
@@ -25,6 +24,8 @@ function switchenVanModus() {
   }
 }
 
+
+// Contactformulier, verschijnt als je klikt op de button
 contactFormKnop.addEventListener("click", toggleContact);
 
 function toggleContact() {

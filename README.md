@@ -273,8 +273,14 @@ hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je we
 De code overzichtelijk houden en alles kunnen terugvinden vond ik lastig! Ik heb ook anderen geholpen met hun code en daardoor haalde ik soms alles een beetje door elkaar, uiteindelijk voor mij en de anderen gelukt! Aan het begin had ik gelijk alle content erin gezet, dat vond ik erg handig. Dan wist ik wat er allemaal in moest komen en kon ik mijn weg naar beneden rustig aan stylen. Het aanspreken van code was soms lastig en wilde soms niet meewerken, dan maar een andere manier zoeken of aan een studentenassistent vragen wat er fout gaat. Als er dan iets opgelost is, is dat zo'n fijn gevoel! Ik vond het ook fijn om alleen met de basis van JS te werken, je kan er best veel mee doen en het is ook nog te snappen!
 
 ### Screenshot(s)
+<img src="images/pagina1-helemaal-licht" width="540px" alt="Hele pagina 1, lichte mode">
+<img src="images/pagina1-helemaal-donker" width="540px" alt="Hele pagina 1, donkere mode">
 
-hier screenshot(s) van je eindresultaat
+<img src="images/pagina2-helemaal" width="540px" alt="Hele pagina 2, lichte mode">
+<img src="images/pagina1-helemaal-donker" width="540px" alt="Hele pagina 2, donkere mode">
+
+
+
 
 </details>
 
@@ -296,6 +302,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 5. formulier inspo: https://codepen.io/ssbalakumar/pen/uzDIA?editors=1100
 6. html structuur: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 7. overflow hidden voor images: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content
-8.
+8. image veranderen op hover: https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php
 
 </details>
