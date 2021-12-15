@@ -774,7 +774,8 @@ main.tweedePagina section:nth-of-type(8) p {
 }
 
 main.tweedePagina section:nth-of-type(8) img {
-  margin: 3em auto 3em auto;
+  margin: 3em 0 3em 0;
+  width: 50%;
 }
 
 main.tweedePagina section:nth-of-type(8) a {
