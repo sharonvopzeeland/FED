@@ -91,7 +91,7 @@ De movement
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 Voor elke meeting nemen wij nog even contact met elkaar op via onze whatsappgroep. Melissa, Daniël en ik bespreken dan een aantal punten wat we willen vragen, soms komen de punten ook overheen en dat is fijn.
 Content staat er zo goed als in voor de 1e pagina, ook de basic css styling zoals background-color staat er in en ik heb comments gebruikt om voor mezelf duidelijk te laten zien welke section ik moet aanspreken.
-<img src="images/comments-content" width="510px" alt="Comments in HTML, content van pagina">
+<img src="images/comments-content.png" width="510px" alt="Comments in HTML, content van pagina">
 
 
 ### Agenda voor meeting
@@ -128,8 +128,8 @@ Deze keer kon Melissa er dus helaas niet bij zijn maar het gesprekje was wel wee
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 Ook voor deze meeting hebben we weer contact gehad, ik merkte dat ik eigenlijk de enige was met echt vragen en dat ik al wat verder ben dus ik had best wat vragen! Melissa kon er niet bij zijn vanwege een crematie.
 Maar ik heb dus veel proces gemaakt! Ik kwam in een lekkere flow en kon goed doorwerken, content van beide pagina's zo goed als volledig. Css Styling kan ik nu verder mee door. Hier was ik al aan begonnen maar nu kan ik er echt op focussen. Ik heb een hamburger menu gemaakt tijdens de les en ben daar heel blij mee! Ik wil wat meer 'moeilijke' content in m'n 2e pagina dus ik wil een contactformulier erop zetten en die met JS laten werken. Ik weet nog niet hoe maar dat komt vast wel goed :)
-<img src="images/hamburger-dicht" width="359px" alt="Hamburgermenu op de site">
-<img src="images/hamburger-open" width="366px" alt="Hamburgermenu op de site, opengeklapt met list-items">
+<img src="images/hamburger-dicht.png" width="359px" alt="Hamburgermenu op de site">
+<img src="images/hamburger-open.png" width="366px" alt="Hamburgermenu op de site, opengeklapt met list-items">
 
 ### Agenda voor meeting
 samen met je groepje opstellen
@@ -155,7 +155,7 @@ Ook deze meeting was weer nuttig en kan ik weer verder!
 - Margin kan je gebruiken voor positioneren.
 
 Hiermee zet je iets in het midden:
-<img src="images/iets-in-midden-zetten" width="237px" alt="Zo zet je iets in het midden">
+<img src="images/iets-in-midden-zetten,png" width="237px" alt="Zo zet je iets in het midden">
 
 
 
@@ -206,8 +206,8 @@ Wat irritant die stem de hele tijd! Aan de ene kant wel handig natuurlijk als je
 - Spreekt engelse woorden (De Movement) heel nederlands uit. -> lang = “eng” bij engelse woorden 
 
 Ik heb de de volgorde niet aangepast, in principe weet de gebruiker dan als eerst waar het over gaat, als je dan de alt-text van een img veranderd naar de h1 dan is het weer dubbel dus dan kan je dit beter gebruiken om het plaatje echt uit te leggen. Verder heb ik de alt van sommige images dus aangepast en ik heb ook lang = "eng" bij sommige woorden/a'tjes toegepast, nu klinkt het beter!
-<img src="images/zonder-lang" width="406px" alt="Hoe het eerst was, zonder lang">
-<img src="images/met-lang" width="477px" alt="Hoe het nu is, met lang">
+<img src="images/zonder-lang.png" width="406px" alt="Hoe het eerst was, zonder lang">
+<img src="images/met-lang.png" width="477px" alt="Hoe het nu is, met lang">
 
 
 #### Muis en toetsenbord
@@ -273,11 +273,11 @@ hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je we
 De code overzichtelijk houden en alles kunnen terugvinden vond ik lastig! Ik heb ook anderen geholpen met hun code en daardoor haalde ik soms alles een beetje door elkaar, uiteindelijk voor mij en de anderen gelukt! Aan het begin had ik gelijk alle content erin gezet, dat vond ik erg handig. Dan wist ik wat er allemaal in moest komen en kon ik mijn weg naar beneden rustig aan stylen. Het aanspreken van code was soms lastig en wilde soms niet meewerken, dan maar een andere manier zoeken of aan een studentenassistent vragen wat er fout gaat. Als er dan iets opgelost is, is dat zo'n fijn gevoel! Ik vond het ook fijn om alleen met de basis van JS te werken, je kan er best veel mee doen en het is ook nog te snappen!
 
 ### Screenshot(s)
-<img src="images/pagina1-helemaal-licht" width="540px" alt="Hele pagina 1, lichte mode">
-<img src="images/pagina1-helemaal-donker" width="540px" alt="Hele pagina 1, donkere mode">
+<img src="images/pagina1-helemaal-licht.png" width="540px" alt="Hele pagina 1, lichte mode">
+<img src="images/pagina1-helemaal-donker.png" width="540px" alt="Hele pagina 1, donkere mode">
 
-<img src="images/pagina2-helemaal" width="540px" alt="Hele pagina 2, lichte mode">
-<img src="images/pagina1-helemaal-donker" width="540px" alt="Hele pagina 2, donkere mode">
+<img src="images/pagina2-helemaal.png" width="540px" alt="Hele pagina 2, lichte mode">
+<img src="images/pagina1-helemaal-donker.png" width="540px" alt="Hele pagina 2, donkere mode">
 
 
 
