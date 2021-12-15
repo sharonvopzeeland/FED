@@ -277,7 +277,7 @@ De code overzichtelijk houden en alles kunnen terugvinden vond ik lastig! Ik heb
 <img src="images/pagina1-helemaal-donker.png" width="540px" alt="Hele pagina 1, donkere mode">
 
 <img src="images/pagina2-helemaal.png" width="540px" alt="Hele pagina 2, lichte mode">
-<img src="images/pagina1-helemaal-donker.png" width="540px" alt="Hele pagina 2, donkere mode">
+<img src="images/pagina2-helemaal-donker.png" width="540px" alt="Hele pagina 2, donkere mode">
 
 
 
